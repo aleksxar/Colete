@@ -127,7 +127,7 @@ iframe {
 </div>
 
 <iframe id="trackerFrame" title="Package tracking widget"
-src="https://postal.ninja/widget/tracker?lc=ro&inpText=AWB&btnColor=000000&font=16px+sans-serif&btnFont=sans-serif&noSave=true&theme=dark">
+src="https://postal.ninja/widget/tracker?lc=ro&inpText=AWB&btnText=Urmărește coletul 👀&btnColor=%23ffa500&font=sans-serif&btnFont=sans-serif&noSave=true&theme=dark">
 </iframe>
 </main>
 
@@ -140,7 +140,7 @@ const packageList = document.getElementById('packageList'),
       deleteBtn = document.getElementById('deleteBtn'),
       saveBtn = document.getElementById('saveBtn');
 
-const baseUrl = "https://postal.ninja/widget/tracker?lc=ro&inpText=AWB&btnColor=000000&font=16px+sans-serif&btnFont=sans-serif&noSave=true&theme=dark";
+const baseUrl = "https://postal.ninja/widget/tracker?lc=ro&inpText=AWB&btnText=Urmărește coletul 👀&btnColor=%23ffa500&font=sans-serif&btnFont=sans-serif&noSave=true&theme=dark";
 let packages = {};
 
 function load() { packages = JSON.parse(localStorage.getItem('myPackages')) || {}; }
