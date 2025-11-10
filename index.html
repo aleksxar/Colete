@@ -86,8 +86,7 @@ select {
 #saveBtn:hover { background:var(--primary-hover); }
 
 iframe {
-    width:100%;
-    min-height:120px;
+    width:100%; height:300px;
     border:none;
     border-radius: var(--radius);
     background: var(--surface);
@@ -127,16 +126,9 @@ iframe {
     </div>
 </div>
 
-<iframe
-  id="trackerFrame"
-  title="Package tracking widget"
-  src="https://postal.ninja/widget/tracker?lc=ro&inpText=AWB&btnText=👀 Urmărește coletul&btnColor=%23ae3c00&btnIcon=false&font=sans-serif&btnFont=sans-serif&noSave=true&theme=dark&autoSize=true"
-  style="width:100%; min-height:120px; border:none; border-radius:8px; background:#2a2a33;"
-  frameborder="0"
-  scrolling="no"
-  onload="(function(i){window.addEventListener('message',function(e){if(e.data.src==='PNJ'&&e.data.height){i.style.height=e.data.height+'px';}});})(this)">
+<iframe id="trackerFrame" title="Package tracking widget"
+src="https://postal.ninja/widget/tracker?lc=ro&inpText=AWB&btnText=👀 Urmărește coletul&btnColor=%23ae3c00&btnIcon=false&font=sans-serif&btnFont=sans-serif&noSave=true&theme=dark">
 </iframe>
-
 </main>
 
 <script>
@@ -164,11 +156,7 @@ function populate(selected='') {
     packageList.value = Object.keys(packages).includes(selected)? selected : "";
 }
 
-function updateFrame(code='') {
-  trackerFrame.src = code
-    ? `${baseUrl}&autoSize=true&tc=${code}`
-    : `${baseUrl}&autoSize=true`;
-}
+function updateFrame(code='') { trackerFrame.src = code ? `${baseUrl}&tc=${code}` : baseUrl; }
 
 function selectChange() {
     const name = packageList.value;
