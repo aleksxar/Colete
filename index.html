@@ -11,12 +11,12 @@
     --border: #444;
     --text: #eee;
     --muted: #aaa;
-    --primary: #007bff;
-    --primary-hover: #0056b3;
-    --secondary: #28a745;
-    --secondary-hover: #218838;
-    --danger: #dc3545;
-    --danger-hover: #c82333;
+    --primary: #005dc1;
+    --primary-hover: #004288;
+    --secondary: #11842c;
+    --secondary-hover: #0c581c;
+    --danger: #8c1924;
+    --danger-hover: #6d1821;
     --radius: 8px;
     --transition: all 0.3s ease;
 }
@@ -121,13 +121,13 @@ iframe {
 
     <div class="buttons-grid">
         <button id="newBtn" class="btn">✳️ Nou</button>
-        <button id="deleteBtn" class="btn">❗ Ștergere</button>
+        <button id="deleteBtn" class="btn">🌹 Ștergere</button>
         <button id="saveBtn" class="btn">💠 Salvare</button>
     </div>
 </div>
 
 <iframe id="trackerFrame" title="Package tracking widget"
-src="https://postal.ninja/widget/tracker?lc=ro&inpText=AWB&btnText=👀 Urmărește coletul&btnColor=%23ffa500&btnIcon=false&font=sans-serif&btnFont=sans-serif&noSave=true&theme=dark">
+src="https://postal.ninja/widget/tracker?lc=ro&inpText=AWB&btnText=👀 Urmărește coletul&btnColor=%23ae3c00&btnIcon=false&font=sans-serif&btnFont=sans-serif&noSave=true&theme=dark">
 </iframe>
 </main>
 
@@ -140,7 +140,7 @@ const packageList = document.getElementById('packageList'),
       deleteBtn = document.getElementById('deleteBtn'),
       saveBtn = document.getElementById('saveBtn');
 
-const baseUrl = "https://postal.ninja/widget/tracker?lc=ro&inpText=AWB&btnText=👀 Urmărește coletul&btnColor=%23ffa500&btnIcon=false&font=sans-serif&btnFont=sans-serif&noSave=true&theme=dark";
+const baseUrl = "https://postal.ninja/widget/tracker?lc=ro&inpText=AWB&btnText=👀 Urmărește coletul&btnColor=%23ae3c00&btnIcon=false&font=sans-serif&btnFont=sans-serif&noSave=true&theme=dark";
 let packages = {};
 
 function load() { packages = JSON.parse(localStorage.getItem('myPackages')) || {}; }
